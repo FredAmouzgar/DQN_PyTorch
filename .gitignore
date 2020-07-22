@@ -14,5 +14,5 @@ htmlcov/
 .cache
 .pytest_cache/
 
-# Unity
+# Logs
 unity-environment.log
