@@ -27,4 +27,5 @@ Here is a reward plot acquired by the agent while learning. It surpasses +16 aft
 <Img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/DQN_reward_plot.png" width="400" height="200">
 
 Look at it go:
+
 <Img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/BananaAgent.gif" width="400" height="200">
