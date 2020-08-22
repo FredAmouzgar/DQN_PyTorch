@@ -1,7 +1,6 @@
 # Deep Q-Network (DQN) implemeted by PyTorch for the Unity-based Banana Envirnment
 
 ## Introduction
-
 This repository is an implementation of the DQN algorithm for the Banana Environment developed by Unity3D and accessed through the UnityEnvironment library. It is an extension of the code sample provided by the Udacity Deep RL teaching crew (for more information visit their [website](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893)). The environment is presented as a vector; thus, we did not use Convolutional Neural Networks (CNN) in the implementation.
 
 This repository consists of these files:
@@ -15,6 +14,17 @@ This repository consists of these files:
 To test the code, after cloning the project, open the `Navigation.ipynb` notebook. It has all the necessary steps to install and load the packages, and train and test the agent. It also automatically detects the operating system, and loads the corresponding environment. There is an already trained agent stored in `checkpoint.pth`, by running the last part of the notebook, this can be directly tested.
 
 ## The Banana Environment
-The Banana environment is a vectorized version of the Banana Collection designed by the Unity game engine. The task is simple. The agent explores its world consists of Yellow (good) and Purple (bad) bananas. It should absorb the good ones (by walking on them), and avoid the bad ones. Having a good banana is rewarded with a `+1` reward, and a bad one with `-1`. In this activity, we consider any average reward more than 13 a successful agent.
+The Banana environment is a vectorized version of the Banana Collection designed by the Unity game engine. The task is simple. The agent explores its world consists of Yellow (good) and Purple (bad) bananas. It should absorb the good ones (by walking on them), and avoid the bad ones. Having a good banana is rewarded with a `+1` reward, and a bad one with `-1`. In this activity, we consider any agent capable of achieving an average reward more than 13, a successful agent.
+
+The action space has four discrete actions:
+1. Move Forward (action 0)
+2. Move Backward (action 1)
+3. Turn Right (action 2)
+4. Turn Left (action 3)
  
- <Img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/BananaAgent.gif" width="400" height="200">
+## A Smart Agent
+Here is a reward plot acquired by the agent while learning. It surpasses +16 after around 1100 episodes.
+<Img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/DQN_reward_plot.png" width="400" height="200">
+
+Look at it go:
+<Img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/BananaAgent.gif" width="400" height="200">
