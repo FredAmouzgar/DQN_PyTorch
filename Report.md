@@ -13,7 +13,7 @@ The DQN paper proposed five-layer neural network architecture. The input to the 
 DQN, as represented in Figure 1, executes a typical reinforcement learning algorithm. It gathers a repository of experiences or transitions while exploring the environment. This dataset is collected by a behavior policy which is being updated more regularly. The target policy, which determines the final policy of the agent, is updated on a slower rate. Learning in a discrete action environment is classification.
 
 <center><img src="https://raw.githubusercontent.com/FredAmouzgar/DQN_PyTorch/master/pics/DQN_algorithm.png" width="800" height="400">
-<br><font size=2>Figure 1: The DQN</font></center>
+<br><font size=2>Figure 1: The DQN <a href="https://arxiv.org/abs/1312.5602">[2]</a></font></center>
 
 ### The Banana Environment
 The Banana environment is a vectorized version of the Banana Collection designed by the Unity game engine. The task is simple. The agent explores its world consists of Yellow (good) and Purple (bad) bananas. It should absorb the good ones (by walking on them), and avoid the bad ones. Having a good banana is rewarded with a `+1` reward, and a bad one with `-1`. In this activity, we consider any agent capable of achieving an average reward of more than 13, a successful agent.
@@ -43,3 +43,30 @@ Figure 3 shows one episode after training.
 
 <center><Img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/BananaAgent.gif" width="400" height="200">
 <br><font size=2>Figure 3: A Trained Agent</font></center>
+
+### Hyperparameters
+Banana Environment:
+- State size: 37
+- Action size: 4
+
+
+DQN Agent:
+- Replay memory buffer size: <img src="https://render.githubusercontent.com/render/math?math=10 ^ 5">
+- Batch size: 64
+- <img src="https://render.githubusercontent.com/render/math?math=\gamma">: 0.99
+- <img src="https://render.githubusercontent.com/render/math?math=\tau"> for target update: <img src="https://render.githubusercontent.com/render/math?math=10^{-3}">
+- <img src="https://render.githubusercontent.com/render/math?math=\alpha"> or learning rate: <img src="https://render.githubusercontent.com/render/math?math=5\times 10 ^ {-4}">
+
+Neural Networks:
+- Input Layer: 37 (state size)
+- Layer 1: 64 units
+- Layer 2: 64 units
+- Output Layer: 4 (action size)
+- Activation function: ReLU, linear (output layer)
+
+Training Parameters:
+- Episodes: 1200
+- Steps in every episode: 1000
+- First <img src="https://render.githubusercontent.com/render/math?math=\epsilon"> value: 1.0
+- Final <img src="https://render.githubusercontent.com/render/math?math=\epsilon"> value: 0.01
+- <img src="https://render.githubusercontent.com/render/math?math=\epsilon"> decay: 0.995
