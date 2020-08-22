@@ -70,3 +70,9 @@ Training Parameters:
 - First <img src="https://render.githubusercontent.com/render/math?math=\epsilon"> value: 1.0
 - Final <img src="https://render.githubusercontent.com/render/math?math=\epsilon"> value: 0.01
 - <img src="https://render.githubusercontent.com/render/math?math=\epsilon"> decay: 0.995
+
+### Future Work:
+1. Augmenting the agent with prioritized experience replay buffer
+2. Double DQN
+3. Dueling DQN
+4. Putting it all together and implementing the rainbow algorithm.
