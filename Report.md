@@ -10,10 +10,10 @@ The DQN paper proposed five-layer neural network architecture. The input to the 
 2. Target Networks
 
 ### Method
-DQN, as represented in Figure 1, executes a typical reinforcement learning algorithm. It gathers a repository of experiences or transitions while exploring the environment. This dataset is collected by a behavior policy which is being updated more regularly. The target policy which determines the final policy of the agent is updated on a slower rate. Learning in a discrete action environment is classification.
+DQN, as represented in Figure 1, executes a typical reinforcement learning algorithm. It gathers a repository of experiences or transitions while exploring the environment. This dataset is collected by a behavior policy which is being updated more regularly. The target policy, which determines the final policy of the agent, is updated on a slower rate. Learning in a discrete action environment is classification.
 
-<img src="https://raw.githubusercontent.com/FredAmouzgar/DQN_PyTorch/master/pics/DQN_algorithm.png" width="400" height="200">
-<br><center><font size=2>Figure 1: The DQN</font></center>
+<center><img src="https://raw.githubusercontent.com/FredAmouzgar/DQN_PyTorch/master/pics/DQN_algorithm.png" width="400" height="200">
+<br><font size=2>Figure 1: The DQN</font></center>
 
 ### The Banana Environment
 The Banana environment is a vectorized version of the Banana Collection designed by the Unity game engine. The task is simple. The agent explores its world consists of Yellow (good) and Purple (bad) bananas. It should absorb the good ones (by walking on them), and avoid the bad ones. Having a good banana is rewarded with a `+1` reward, and a bad one with `-1`. In this activity, we consider any agent capable of achieving an average reward of more than 13, a successful agent.
@@ -36,10 +36,10 @@ This repository consists of these files:
 To test the code, after cloning the project, open the `Navigation.ipynb` notebook. It has all the necessary steps to install and load the packages, and train and test the agent. It also automatically detects the operating system and loads the corresponding environment. There is an already trained agent stored in `checkpoint.pth`, by running the last part of the notebook, this can be directly tested.
 
 Figure 2 is depicted a reward plot acquired by the agent while learning. It surpasses +16 after around 1100 episodes.
-<img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/DQN_reward_plot.png" width="400" height="200">
-<br><center><font size=2>Figure 2: The average reward during training</font></center>
+<center><img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/DQN_reward_plot.png" width="400" height="200">
+<br><font size=2>Figure 2: The average reward during training</font></center>
 
 Figure 3 shows one episode after training.
 
-<Img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/BananaAgent.gif" width="400" height="200">
-<br><center><font size=2>Figure 3: A Trained Agent</font></center>
+<center><Img src="https://github.com/FredAmouzgar/DQN_PyTorch/raw/master/pics/BananaAgent.gif" width="400" height="200">
+<br><font size=2>Figure 3: A Trained Agent</font></center>
